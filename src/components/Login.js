@@ -17,11 +17,12 @@ function Login({ setIsLoggedIn }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-
-    setIsLoggedIn(true);
-
-    // after logging the user in, redirect to the home page!
-    history.push("/");
+    // client.post("http://localhost:3001/login", formData).then((user) => {
+      setIsLoggedIn(true);
+     
+      history.push("/home");
+   // });
+  
   }
 
   return (
